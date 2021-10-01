@@ -1,0 +1,45 @@
+
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				
+					<div class="col-md-12">
+						<div class="booking-cta">
+							<h1>Book your flight today</h1>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
+						</div>
+					</div>
+					
+					<div class="col-md-12 col-lg-12">
+						<div class="booking-form">
+							<form #findFlightsForm="ngForm" (ngSubmit)="onSubmit(findFlightsForm.value)">
+								
+								<div class="form-row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Flying from</span>
+											<input class="form-control" name="from" [(ngModel)]="data.from" id="form"type="text" placeholder="City">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Flyning to</span>
+											<input class="form-control" name="to" [(ngModel)]="data.to" id="to "type="text" placeholder="City">
+										</div>
+									</div>
+									
+								</div>
+								
+							
+								<div class="form-btn">
+									<button class="submit-btn">Show flights</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	

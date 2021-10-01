@@ -1,0 +1,37 @@
+<div class="wrapper">
+    <div class="row">
+        <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+            <h3 style="margin-top: 20px; font-size: x-large;">Sign Up</h3>
+            <form #signupForm="ngForm" (ngSubmit)="signUp(signupForm.value)">
+            <small>With an FRS account you can make bookings and manage
+                them quickly and easily.
+            </small>
+            <div class="row">
+                First Name : <input (blur)="validateFirstName(); enableButton();" class="form-control" type="text" name="firstName" [(ngModel)]="user.firstName">
+                <small *ngIf="firstNameFlag" style="color: red;">Invalid User Name</small>
+            </div>
+            <div class="row">
+                Last Name : <input (blur)="validateLastName(); enableButton();" class="form-control" type="text" name="lastName" [(ngModel)]="user.lastName">
+                <small *ngIf="lastNameFlag" style="color: red;">Invalid Phone Number</small>
+            </div>
+            <div class="row">
+                Email : <input (blur)="validateEmail(); enableButton();" class="form-control" type="email" name="email" [(ngModel)]="user.email">
+                <small *ngIf="emailFlag" style="color: red;">Invalid Email</small>
+            </div>
+            <div class="row">
+                Password : <input class="form-control" type="password" name="password" [(ngModel)]="user.password" #password="ngModel"
+                minlength="5" maxlength="50" required>
+                
+               
+            </div>
+            
+            <div class="row">
+                <button [disabled]="buttonFlag" type="submit" class="regBtn btn btn-success">
+                    Register
+                  </button>
+            </div>
+        </form>
+        </div>
+    </div>
+  </div>
+  

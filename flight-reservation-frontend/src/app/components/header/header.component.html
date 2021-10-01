@@ -1,0 +1,28 @@
+<div>
+  <div class="header-dark">
+    <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+      <div class="container">
+        <a class="navbar-brand" href="#">Flight Reservation</a>
+        <div id="navcol-1">
+          <ul class="navbar-nav mr-auto">
+            <li *ngIf="buttonFlag" class="nav-item" style="margin-right: 30px; margin-top: 8px; color: white">
+              <em>Welcome {{ email }}</em>
+            </li>
+            <li *ngIf="!buttonFlag" class="nav-item">
+              <span class="navbar-text">
+                <a href="login" class="login">Log In</a>
+              </span>
+
+            </li>
+            <li *ngIf="!buttonFlag" class="nav-item">
+              <a class="btn btn-light action-button" role="button" href="signup">Sign Up</a>
+            </li>
+            <li *ngIf="buttonFlag" class="nav-item">
+                <a class="btn btn-light action-button" role="button" (click)=logOut()>Log Out</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

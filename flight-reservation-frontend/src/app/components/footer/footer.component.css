@@ -1,0 +1,24 @@
+
+.footer-basic {
+    padding:55px 0;
+    background-color:#000;
+    color:#f3eaea;
+   position: fixed;
+   bottom:0;
+   width:100%;
+   height: 5%;
+   margin-top: auto;
+   
+   
+  }
+  
+ 
+  
+  
+  .footer-basic .copyright {
+    
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:10px;
+  }

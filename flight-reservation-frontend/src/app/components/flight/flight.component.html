@@ -1,0 +1,43 @@
+
+    <h2>Flights</h2>
+
+    <div class="flight-template">
+    <table>
+       
+        <thead>
+          <tr>
+            <th scope="col">Flight</th>
+            <th scope="col">Airlines</th>
+            <th scope="col">Departure City</th>
+            <th scope="col">Arrival City</th>
+            <th scope="col">Departure Date</th>
+            <th scope="col">Departure Time</th>
+            <th scope="col">Booking</th>
+          </tr>
+        </thead>
+      
+     <tbody>
+    
+          <tr *ngFor="let flight of data"> 
+              
+                <td>{{flight.flightNumber}}</td>
+                <td>{{flight.operatingAirlines}}</td>
+                <td>{{flight.departureCity}}</td>
+                <td>{{flight.arrivalCity}}</td>
+                <td>{{flight.dateOfDeparture}}</td>
+                <td>{{flight.estimatedDepartureTime}}</td>
+                <td><a (click)='onSelect(flight.id)'><button class="btn btn-primary">Book</button></a></td>
+                               
+            
+          </tr>
+        </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+         
